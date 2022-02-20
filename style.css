@@ -1,0 +1,153 @@
+/*
+@font-face {font-family: "Dancing Script";src: url("typefaces/DancingScript.ttf");}
+@font-face {font-family: "Montserrat";src: url("typefaces/montserrat.ttf");}
+*/
+
+/* GLOBAL */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin:0px;
+    background:left/400px repeat url("images/background.jpg");
+}
+svg {
+    /*fix white edges in repeating svgs*/
+    shape-rendering: crispEdges;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    margin: 2px 0 15px 0;
+    font-size:1.8em;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #dbdbdb;
+}
+p {
+    margin: 0;
+    padding-bottom: 15px;
+}
+p:last-of-type{
+    padding-bottom: 0;
+}
+figure {
+    width: 40%;
+    margin: 16px;
+    text-size: 0.5em;
+}
+figure.right {
+    float: right;
+}
+figure.left {
+    float: left;
+}
+figcaption {
+    font-size: 0.8em;
+}
+.potrait {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 50%;
+    border:10px double #2f4215;
+}
+
+/* HEADER */
+header {
+    background:left/auto 100% repeat-x url("images/header.png");
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    margin: -50px 0 0 0;
+    text-shadow: #000 0 0 .1em;
+    color: #fff;
+    font: bold 6em "Dancing Script", cursive;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #2f4215;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    padding: 0 20px 0 20px ;
+}
+nav ul li:hover {
+    background-color: #222f0f;
+}
+
+/* CONTENT */
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20% 0 20%;
+    background-color: #f6fbdc;
+}
+section {
+    flex: 3
+}
+section article {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+}
+section article p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+aside {
+    flex: 1;
+    margin: 10px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: #000 0 0 .1em;
+}
+
+/* MOBILE SUPPORT */
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 10px 10px 0 10px;
+        flex-direction: column;
+    }
+    header h1 {
+        font-size: 4em;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav ul li {
+        width: auto;
+    }
+    .potrait {
+        height: 200px;
+        width: auto;
+    }
+}
